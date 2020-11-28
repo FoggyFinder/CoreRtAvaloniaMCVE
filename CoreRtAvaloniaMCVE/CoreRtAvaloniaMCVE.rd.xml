@@ -1,0 +1,25 @@
+﻿<Directives>
+  <Application>
+    <Assembly Name="Avalonia.Animation" Dynamic="Required All" />
+    <Assembly Name="Avalonia.Visuals" Dynamic="Required All" />
+    <Assembly Name="Avalonia.Themes.Default" Dynamic="Required All"  />
+    <Assembly Name="Avalonia.Diagnostics" Dynamic="Required All" />
+
+    <Assembly Name="SkiaSharp">
+      <Type Name="SkiaSharp.SKData" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKImage" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKTypeface" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKString" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKSurface" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKCanvas" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKShader" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKPicture" Dynamic="Required All" />
+      <Type Name="SkiaSharp.SKPictureRecorder" Dynamic="Required All" />
+    </Assembly>
+
+    <Assembly Name="System.ObjectModel" Dynamic="Required All" />
+    <Assembly Name="System.Private.CoreLib" Dynamic="Required All">
+      <Type Name="System.Tuple`5[[System.String,System.Private.CoreLib],[System.Int32,System.Private.CoreLib],[System.Int32,System.Private.CoreLib],[System.Int32,System.Private.CoreLib],[System.Int32,System.Private.CoreLib]]" Dynamic="Required All" />
+    </Assembly>
+  </Application>
+</Directives>

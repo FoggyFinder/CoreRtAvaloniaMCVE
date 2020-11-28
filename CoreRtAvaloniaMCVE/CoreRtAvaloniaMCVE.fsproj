@@ -3,10 +3,38 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseStandardResourceNames>true</UseStandardResourceNames>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
-
   <ItemGroup>
-    <Compile Include="Program.fs" />
+    <AvailableItemName Include="AvaloniaResource" />
+    <AvaloniaResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="CoreRtAvaloniaMCVE.rd.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Program.fs" />
+    <Compile Include="Views.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <RdXmlFile Include="CoreRtAvaloniaMCVE.rd.xml" />
+    <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="6.0.0-*" />
+    <NativeLibrary Include="runtimeobject.lib" />
+    <IlcArg Include="--verbose" />
+    <IlcArg Include="--singlethreaded" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.11" />
+    <PackageReference Include="System.Reactive" Version="4.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gjallarhorn.Bindable\src\Gjallarhorn.Bindable.Avalonia\Gjallarhorn.Bindable.Avalonia.fsproj" />
+  </ItemGroup>
 </Project>

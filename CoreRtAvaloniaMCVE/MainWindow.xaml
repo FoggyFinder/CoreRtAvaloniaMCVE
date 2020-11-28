@@ -1,0 +1,45 @@
+﻿<Window
+    x:Class="Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="CoreRtMCVE"
+    MinWidth="400"
+    MinHeight="100"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    SizeToContent="WidthAndHeight"
+    mc:Ignorable="d">
+    <Grid ColumnDefinitions="*,*" RowDefinitions="*,Auto">
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5">
+            Current:
+        </TextBlock>
+        <TextBox
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="5"
+            IsReadOnly="True"
+            Text="{Binding Current, Mode=OneWay}" />
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5"
+            HorizontalAlignment="Stretch"
+            Command="{Binding Increment}">
+            Increment
+        </Button>
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="5"
+            HorizontalAlignment="Stretch"
+            Command="{Binding Decrement}">
+            Decrement
+        </Button>
+    </Grid>
+</Window>
